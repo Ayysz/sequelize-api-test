@@ -32,7 +32,7 @@ app.use((err, req, res, next) => {
 });
 
 // membuat server
-const port = process.env.port ||3000;
+const port = process.env.PORT ||3000;
 app.listen(port, (err) => {
     err?
         console.error(`Error on - ${err}`):
