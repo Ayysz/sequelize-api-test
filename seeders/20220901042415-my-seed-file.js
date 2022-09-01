@@ -11,15 +11,26 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-   await queryInterface.bulkInsert('User', [{
-    first_name: 'Tobey',
-    last_name: 'Mcgueire',
-    bio: 'Spiderman',
-    createdAt: new Date(),
-    updatedAt: new Date(),
-    phone: '13400021',
-    email: 'spideyTobey@gmail.com'
-   }], {});
+   await queryInterface.bulkInsert('User', [
+    {
+      first_name: 'Tobey',
+      last_name: 'Mcgueire',
+      bio: 'Spiderman',
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      phone: '13400021',
+      email: 'spideyTobey@gmail.com'
+    },
+    {
+      first_name: 'Andrew',
+      last_name: 'Garfield',
+      bio: 'Spiderman 2',
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      phone: '124022',
+      email: 'spideyAndrew@gmail.com'
+   }
+  ], {});
   },
 
   async down (queryInterface, Sequelize) {

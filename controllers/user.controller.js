@@ -38,7 +38,6 @@ exports.sendData = async (req, res, next) => {
 exports.getAllData = async (req, res, next) => {
     try {
         const response = await user.findAll();
-        console.log(response);
         if(response.length > 0){
             return res.status(201)
             .json({
