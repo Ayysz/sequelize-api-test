@@ -31,9 +31,9 @@ app.use((err, req, res, next) => {
 });
 
 // membuat server
-app.listen(8080, (err) => {
+app.listen(3000, (err) => {
     err?
         console.error(`Error on - ${err}`):
-        console.log(`Server running at http://localhost:8080`);
+        console.log(`Server running at http://localhost:3000`);
         db.sequelize.sync();
 });
