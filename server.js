@@ -31,9 +31,10 @@ app.use((err, req, res, next) => {
 });
 
 // membuat server
-app.listen(3000, (err) => {
+const port = process.env.PORT ||3000;
+app.listen(port, (err) => {
     err?
         console.error(`Error on - ${err}`):
-        console.log(`Server running at http://localhost:3000`);
+        console.log(`Server running at http://localhost:${port}`);
         db.sequelize.sync();
 });
