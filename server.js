@@ -13,11 +13,11 @@ app.use(express.urlencoded({extended: true}));
 // app.use(bodyParser.urlencoded({extended: true}));
 app.use(morgan('dev'));
 
-app.get('/test', (req, res) => {
-    const dirPath = path.join(__dirname, 'public/index.html')
-    console.log(dirPath);
-    res.sendFile(dirPath);
-});
+// app.get('/test', (req, res) => {
+//     const dirPath = path.join(__dirname, 'public/index.html')
+//     console.log(dirPath);
+//     res.sendFile(dirPath);
+// });
 // routes ke route.js
 app.use('/api/v1', routes);
 
