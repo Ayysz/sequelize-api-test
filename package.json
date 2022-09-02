@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
-    "demon": "nodemon --delay 1.5 server"
+    "demon": "nodemon --delay 1.5 server",
+    "hMigrate": "npx sequelize-cli db:migrate",
+    "hSeed": "npx sequelize-cli db:seed:all"
   },
   "keywords": [],
   "author": "",
