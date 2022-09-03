@@ -9,8 +9,24 @@ module.exports = {
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
     return [
-      queryInterface.addColumn( 'User', 'email', Sequelize.STRING),
-      queryInterface.addColumn( 'User', 'phone', Sequelize.STRING)
+      queryInterface.addColumn( 'User', 'email', {
+        type: Sequelize.STRING,
+        after: 'bio'
+      }),
+      queryInterface.addColumn( 'User', 'phone', {
+        type: Sequelize.STRING,
+        after: 'email'
+      }),
+      queryInterface.addColumn( 'Task', 'userId', {
+          type: Sequelize.INTEGER,
+          references: {
+            model: 'User',
+            key: 'id',
+          },
+          onUpdate: 'CASCADE',
+          onDelete: 'CASCADE',
+          defaultValue: null,
+      })
     ]
   },
 

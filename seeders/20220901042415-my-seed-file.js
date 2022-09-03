@@ -41,7 +41,10 @@ module.exports = {
      * await queryInterface.bulkDelete('People', null, {});
      */
     await queryInterface.bulkDelete('User', [{
-      first_name: 'Tobey'
+      first_name: [
+        'Tobey',
+        'Andrew'
+      ]
     }], {});
   }
 };

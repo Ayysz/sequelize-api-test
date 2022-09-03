@@ -10,7 +10,7 @@ module.exports = {
       },
       title: {
         type: Sequelize.STRING
-      }
+      },
     });
   },
   async down(queryInterface, Sequelize) {
